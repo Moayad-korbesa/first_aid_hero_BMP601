@@ -1,0 +1,50 @@
+package com.firstaidhero.app.adapter;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import com.firstaidhero.app.R;
+import com.firstaidhero.app.model.Step;
+import java.util.List;
+
+public class StepAdapter extends RecyclerView.Adapter<StepAdapter.ViewHolder> {
+
+    private List<Step> stepList;
+
+    public StepAdapter(List<Step> stepList) {
+        this.stepList = stepList;
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_step, parent, false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Step step = stepList.get(position);
+        holder.tvStepNumber.setText(String.valueOf(step.getStepNumber()));
+        holder.tvInstruction.setText(step.getInstructionText());
+    }
+
+    @Override
+    public int getItemCount() {
+        return stepList.size();
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView tvStepNumber, tvInstruction;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            tvStepNumber = itemView.findViewById(R.id.tvStepNumber);
+            tvInstruction = itemView.findViewById(R.id.tvInstruction);
+        }
+    }
+}

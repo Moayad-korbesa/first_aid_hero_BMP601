@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FirstAid Hero</string>
+    <string name="search_hint">ابحث عن حالة... حروق، اختناق</string>
+    <string name="most_common">الحالات الأكثر شيوعاً</string>
+    <string name="emergency_call">اتصل بالطوارئ (110)</string>
+    <string name="home">الرئيسية</string>
+    <string name="emergency">الطوارئ</string>
+    <string name="log">السجل</string>
+    <string name="statistics">الإحصائيات</string>
+    <string name="burns">حروق</string>
+    <string name="heart_attack">النوبة القلبية</string>
+    <string name="choking">الاختناق</string>
+    <string name="asthma">كسور العظام</string>
+    <string name="no_results">إدخال غير موجود</string>
+    <string name="no_results_en">No results - no match</string>
+    <string name="back">رجوع</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save">حفظ</string>
+    <string name="add">إضافة</string>
+    <string name="edit">إضافة</string>
+    <string name="add_new_number">إضافة رقم جديد +</string>
+    <string name="contact_name">الاسم</string>
+    <string name="contact_number">الرقم</string>
+    <string name="case_name">اسم الحالة</string>
+    <string name="description">الوصف</string>
+    <string name="date_time">التاريخ والوقت</string>
+    <string name="cases_log">سجل الحالات</string>
+    <string name="emergency_numbers">أرقام الطوارئ</string>
+    <string name="protocol_steps">خطوات الإسعاف</string>
+    <string name="statistics_dashboard">شاشة الإحصائيات والرسوم البيانية</string>
+    <string name="total_cases">حالات معالجة</string>
+    <string name="total_cases_count">350</string>
+    <string name="active_cases">حالات نشطة</string>
+    <string name="active_cases_count">8</string>
+    <string name="fatal_cases">حالات مميتة</string>
+    <string name="fatal_cases_count">3</string>
+</resources>
