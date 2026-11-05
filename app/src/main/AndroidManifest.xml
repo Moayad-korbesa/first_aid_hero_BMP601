@@ -34,7 +34,6 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".SearchResultsActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".AddCaseActivity" android:parentActivityName=".CasesLogActivity" />
     </application>
 
 </manifest>

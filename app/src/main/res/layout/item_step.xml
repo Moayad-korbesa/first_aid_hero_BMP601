@@ -9,7 +9,6 @@
     android:layoutDirection="rtl"
     android:gravity="center_vertical">
 
-    <!-- رقم الخطوة (دائرة) -->
     <TextView
         android:id="@+id/tvStepNumber"
         android:layout_width="40dp"
@@ -22,7 +21,6 @@
         android:background="@drawable/circle_step_bg"
         android:layout_marginStart="12dp" />
 
-    <!-- نص الخطوة -->
     <TextView
         android:id="@+id/tvInstruction"
         android:layout_width="0dp"

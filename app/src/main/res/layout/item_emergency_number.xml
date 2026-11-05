@@ -16,7 +16,6 @@
         android:gravity="center_vertical"
         android:layoutDirection="rtl">
 
-        <!-- معلومات الرقم -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -42,7 +41,6 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- زر الاتصال -->
         <ImageView
             android:id="@+id/btnCall"
             android:layout_width="44dp"

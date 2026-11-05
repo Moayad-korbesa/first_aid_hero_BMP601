@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
 
-        // تحميل الـ Fragment الافتراضي (الرئيسية)
         if (savedInstanceState == null) {
             loadFragment(new HomeFragment());
         }

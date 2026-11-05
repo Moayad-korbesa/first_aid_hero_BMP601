@@ -6,7 +6,6 @@
     android:background="@color/background"
     android:layoutDirection="rtl">
 
-    <!-- شريط علوي -->
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -27,7 +26,6 @@
             android:gravity="center" />
     </LinearLayout>
 
-    <!-- حاوية الـ Fragments -->
     <FrameLayout
         android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
@@ -35,7 +33,6 @@
         android:layout_below="@id/topBar"
         android:layout_above="@id/bottomNav" />
 
-    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"

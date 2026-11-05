@@ -17,7 +17,7 @@ import java.util.List;
 
 public class EmergencyNumberAdapter extends RecyclerView.Adapter<EmergencyNumberAdapter.ViewHolder> {
 
-    private final List<String[]> contactList; // كل عنصر: [الاسم, الرقم]
+    private final List<String[]> contactList;
     private final Context context;
 
     public EmergencyNumberAdapter(Context context, List<String[]> contactList) {

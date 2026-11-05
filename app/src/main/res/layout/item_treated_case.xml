@@ -52,6 +52,5 @@
             android:textColor="@color/green_success"
             android:textSize="12sp"
             android:visibility="gone" />
-        <!-- سيظهر فقط إذا كان هناك مسار صورة -->
     </LinearLayout>
 </androidx.cardview.widget.CardView>

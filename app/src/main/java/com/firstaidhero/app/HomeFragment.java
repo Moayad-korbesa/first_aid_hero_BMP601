@@ -56,7 +56,6 @@ public class HomeFragment extends Fragment {
 
         loadEmergencies();
 
-        // زر الطوارئ
         view.findViewById(R.id.btnEmergencyCall).setOnClickListener(v -> {
             Intent callIntent = new Intent(Intent.ACTION_DIAL);
             callIntent.setData(Uri.parse("tel:110"));
@@ -67,7 +66,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        // شريط البحث
         view.findViewById(R.id.searchBar).setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), SearchResultsActivity.class);
             startActivity(intent);

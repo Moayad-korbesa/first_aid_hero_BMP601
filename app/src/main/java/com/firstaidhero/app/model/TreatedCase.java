@@ -4,7 +4,7 @@ public class TreatedCase {
     private int id;
     private String description;
     private String date;
-    private String photo; // مسار الصورة كنص
+    private String photo;
     private String procedures;
 
     public TreatedCase(int id, String description, String date, String photo, String procedures) {

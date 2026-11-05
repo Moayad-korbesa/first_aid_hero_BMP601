@@ -12,7 +12,7 @@ import java.util.List;
 
 public class TreatedCaseAdapter extends RecyclerView.Adapter<TreatedCaseAdapter.ViewHolder> {
 
-    private List<TreatedCase> caseList;
+    private final List<TreatedCase> caseList;
 
     public TreatedCaseAdapter(List<TreatedCase> caseList) {
         this.caseList = caseList;

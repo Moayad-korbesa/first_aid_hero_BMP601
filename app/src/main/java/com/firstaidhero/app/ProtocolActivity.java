@@ -52,23 +52,19 @@ public class ProtocolActivity extends AppCompatActivity {
         recyclerViewSteps = findViewById(R.id.recyclerViewSteps);
         recyclerViewSteps.setLayoutManager(new LinearLayoutManager(this));
 
-        // جلب البيانات من Intent بشكل آمن
         int caseId = getIntent().getIntExtra("case_id", -1);
         String title = getIntent().getStringExtra("title");
         String dangerLevel = getIntent().getStringExtra("danger_level");
         String symptoms = getIntent().getStringExtra("symptoms");
 
-        // حماية ضد القيم الفارغة (Null Safety)
         if (title == null) title = "حالة غير معروفة";
         if (dangerLevel == null) dangerLevel = "غير محدد";
         if (symptoms == null) symptoms = "لا توجد أعراض مسجلة";
 
-        // عرض البيانات
         tvCaseTitle.setText(title);
         tvDangerLevel.setText(dangerLevel);
         tvSymptoms.setText(symptoms);
 
-        // تلوين مستوى الخطورة بشكل آمن
         if (dangerLevel.equals("حرجة")) {
             tvDangerLevel.setBackgroundColor(getColor(R.color.red_emergency));
         } else if (dangerLevel.equals("متوسطة")) {
@@ -76,12 +72,10 @@ public class ProtocolActivity extends AppCompatActivity {
         } else {
             tvDangerLevel.setBackgroundColor(getColor(R.color.green_success));
         }
-        // عرض البيانات
         tvCaseTitle.setText(title);
         tvDangerLevel.setText(dangerLevel);
         tvSymptoms.setText(symptoms);
 
-        // تلوين مستوى الخطورة
         if (dangerLevel.equals("حرجة")) {
             tvDangerLevel.setBackgroundColor(getColor(R.color.red_emergency));
         } else if (dangerLevel.equals("متوسطة")) {
@@ -90,7 +84,6 @@ public class ProtocolActivity extends AppCompatActivity {
             tvDangerLevel.setBackgroundColor(getColor(R.color.green_success));
         }
 
-        // تحميل الخطوات
         stepList = new ArrayList<>();
         stepAdapter = new StepAdapter(stepList);
         recyclerViewSteps.setAdapter(stepAdapter);

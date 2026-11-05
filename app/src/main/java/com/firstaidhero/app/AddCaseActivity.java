@@ -48,7 +48,6 @@ public class AddCaseActivity extends AppCompatActivity {
         MaterialButton btnSelectPhoto = findViewById(R.id.btnSelectPhoto);
         TextView tvSelectedPhotoName = findViewById(R.id.tvSelectedPhotoName);
 
-        // Date Picker
         etDate.setOnClickListener(v -> {
             MaterialDatePicker<Long> datePicker = MaterialDatePicker.Builder.datePicker()
                     .setTitleText("اختر تاريخ الحالة")
@@ -62,7 +61,6 @@ public class AddCaseActivity extends AppCompatActivity {
             datePicker.show(getSupportFragmentManager(), "DATE_PICKER");
         });
 
-         // Camera Settings
         ActivityResultLauncher<Void> captureImageLauncher = registerForActivityResult(
                 new ActivityResultContracts.TakePicturePreview(),
                 bitmap -> {
@@ -78,7 +76,6 @@ public class AddCaseActivity extends AppCompatActivity {
                 }
         );
 
-        // Pick media from Gallery
         ActivityResultLauncher<String> pickMediaLauncher = registerForActivityResult(
                 new ActivityResultContracts.GetContent(),
                 uri -> {
@@ -90,10 +87,8 @@ public class AddCaseActivity extends AppCompatActivity {
                 }
         );
 
-        // Chose Gallery or Camera button
         btnSelectPhoto.setOnClickListener(v -> showImageSourceDialog(captureImageLauncher, pickMediaLauncher));
 
-        // Save data to the Database
         btnSave.setOnClickListener(v -> {
             String desc = etDesc.getText().toString().trim();
             String date = etDate.getText().toString().trim();
@@ -114,7 +109,6 @@ public class AddCaseActivity extends AppCompatActivity {
         });
     }
 
-    // Show window function
     private void showImageSourceDialog(ActivityResultLauncher<Void> cameraLauncher,
                                        ActivityResultLauncher<String> galleryLauncher) {
         String[] options = {"📷 التصوير بالكاميرا", "🖼️ اختيار من المعرض", "إلغاء"};

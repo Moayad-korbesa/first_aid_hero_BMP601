@@ -12,8 +12,8 @@ import java.util.List;
 
 public class EmergencyAdapter extends RecyclerView.Adapter<EmergencyAdapter.ViewHolder> {
 
-    private List<Emergency> emergencyList;
-    private OnItemClickListener listener;
+    private final List<Emergency> emergencyList;
+    private final OnItemClickListener listener;
 
     public interface OnItemClickListener {
         void onItemClick(Emergency emergency);
@@ -39,7 +39,6 @@ public class EmergencyAdapter extends RecyclerView.Adapter<EmergencyAdapter.View
         holder.tvDangerLevel.setText(emergency.getDangerLevel());
         holder.tvSymptoms.setText(emergency.getSymptoms());
 
-        // تلوين الخلفية حسب مستوى الخطورة
         String dangerLevel = emergency.getDangerLevel();
         if (dangerLevel.equals("حرجة")) {
             holder.tvDangerLevel.setBackgroundColor(

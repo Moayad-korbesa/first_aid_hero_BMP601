@@ -34,11 +34,9 @@ public class SearchResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
 
-        // زر الرجوع
         ImageView btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> finish());
 
-        // تهيئة قاعدة البيانات
         dbHelper = new DatabaseHelper(this);
         try {
             dbHelper.openDatabase();
@@ -46,7 +44,6 @@ public class SearchResultsActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        // ربط العناصر
         etSearch = findViewById(R.id.etSearch);
         recyclerView = findViewById(R.id.recyclerViewSearchResults);
         tvNoResults = findViewById(R.id.tvNoResults);
@@ -63,14 +60,12 @@ public class SearchResultsActivity extends AppCompatActivity {
         });
         recyclerView.setAdapter(adapter);
 
-        // زر مسح البحث
         ImageView btnClear = findViewById(R.id.btnClear);
         btnClear.setOnClickListener(v -> {
             etSearch.setText("");
             etSearch.requestFocus();
         });
 
-        // البحث الفوري أثناء الكتابة
         etSearch.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -84,7 +79,6 @@ public class SearchResultsActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {}
         });
 
-        // جلب الكلمة المفتاحية من Intent (إن وجدت)
         String keyword = getIntent().getStringExtra("keyword");
         if (keyword != null && !keyword.isEmpty()) {
             etSearch.setText(keyword);

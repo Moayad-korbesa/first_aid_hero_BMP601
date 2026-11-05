@@ -30,7 +30,6 @@
             android:textSize="13sp"
             android:layout_marginBottom="16dp" />
 
-        <!-- شريط البحث -->
         <LinearLayout
             android:id="@+id/searchBar"
             android:layout_width="match_parent"
@@ -65,7 +64,6 @@
             android:textStyle="bold"
             android:layout_marginBottom="12dp" />
 
-        <!-- RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewEmergencies"
             android:layout_width="match_parent"
@@ -73,7 +71,6 @@
             android:layout_marginBottom="16dp"
             android:clipToPadding="false" />
 
-        <!-- زر الطوارئ -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEmergencyCall"
             android:layout_width="match_parent"
